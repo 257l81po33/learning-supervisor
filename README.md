@@ -15,13 +15,14 @@
 2. Sound : PAM8403 + speaker
 
 ---
-## Prompts: `ChatGPT`
+## Prompts: 
+`GPT6.1`<br>
 ```
 Google Edge AI Gallery App support MCP and Skills, what would be recommended code to run on AMB82-mini to host on the plush toy Giraffe
 ```
 
 ---
-## [Proposal](https://github.com/rkuo2000/AI-plush-giraffe/blob/main/PROPOSAL.md)
+## [Architecture.md](https://github.com/rkuo2000/AI-plush-giraffe/blob/main/Architecture.md)
 ```text
                    SMART GIRAFFE
  ┌────────────────────────────────────────────┐
@@ -62,3 +63,10 @@ Google Edge AI Gallery App support MCP and Skills, what would be recommended cod
 ---
 ## ProtoTyping
 
+### Prompt 
+`GPT6.1`<br>
+```
+I would like to design an agentic plush toy with Google Edge AI Gemma4-E2B model using AMB82-mini. AMB82-Mini offer features such as image capture, audio/sound recording, play mp3 files (preloaded in SDcard, or receive voice file from TTS), IR distance sensor, IMU, Wheel motor driver. There are different ways for user to communicate with the plush toy, one is using Edge AI App with Gemma4-E2B model to interface with the robot, the other is talking to the agentic plush toy directly. Generate a PROPOSAL.md
+```
+
+### [Proposal.md](https://github.com/rkuo2000/AI-plush-giraffe/blob/main/Proposal.md)
