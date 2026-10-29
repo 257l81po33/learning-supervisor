@@ -24,38 +24,33 @@ Google Edge AI Gallery App support MCP and Skills, what would be recommended cod
 ---
 ## [Architecture.md](https://github.com/rkuo2000/AI-plush-giraffe/blob/main/Architecture.md)
 ```text
-                   SMART GIRAFFE
- ┌────────────────────────────────────────────┐
- │                AMB82-Mini                  │
- │                                            │
- │ Camera ──> local vision ──> perception     │
- │ Mic ─────> audio/event detection           │
- │                                            │
- │              Giraffe Agent API             │
- │        HTTP/WebSocket JSON interface       │
- │                    │                       │
- │       ┌────────────┼────────────┐          │
- │       ▼            ▼            ▼          │
- │    Speaker       Servos        LEDs        │
- │   / playback   head / ears   expression    │
- └────────────────────┬───────────────────────┘
-                      │ Wi-Fi
+                             EYE CARE READING DEVICE
+ ┌──────────────────────────────────────────────────────┐
+ │                     AMB82-Mini                       │
+ │                                                     │
+ │ Camera ──> face / eye / gaze detection            │
+ │ Camera ──> reading distance estimation             │
+ │ Camera ──> light angle and brightness analysis      │
+ │ Mic ─────> voice trigger / event capture           │
+ │                                                     │
+ │              Reading Guard AI Agent                  │
+ │          HTTP/WebSocket / JSON interface            │
+ │                    │                                │
+ │       ┌────────────┼────────────┐                   │
+ │       ▼            ▼            ▼                   │
+ │    Speaker      Warning LED    Wi‑Fi / App         │
+ │   buzzer/voice    status      notifications         │
+ └────────────────────┬───────────────────────────────┘
+                      │ Wi‑Fi
                       │
-              Android phone/tablet
- ┌────────────────────▼───────────────────────┐
- │          Google AI Edge Gallery            │
- │                                            │
- │        on-device model / agent             │
- │                 │                          │
- │         Giraffe Agent Skill                │
- │                 │                          │
- │        JS Skill / MCP ecosystem            │
- │                 │                          │
- │       ┌─────────┼─────────┐                │
- │       ▼         ▼         ▼                │
- │     look()    emotion()   move()           │
- │     status()  play()      etc.             │
- └────────────────────────────────────────────┘
+              Android / iPhone
+ ┌────────────────────▼───────────────────────────────┐
+ │          Mobile App / Notification Center          │
+ │                                                   │
+ │   distance alert    brightness alert             │
+ │   light angle alert  gaze-on-paper detection      │
+ │   history logs      threshold configuration       │
+ └───────────────────────────────────────────────────┘
 ```
 ### System Architecture Diagram
 ![](https://github.com/rkuo2000/AI-plush-giraffe/blob/main/assets/AI-plush-giraffe_architecture_diagram.png?raw=true)
